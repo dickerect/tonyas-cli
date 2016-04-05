@@ -23,6 +23,7 @@ Notes:
 
 * You may need to add @ImportResource to TonyasCliApplication to include your other spring context file(s)/classes.
 * Also all the other dependencies should be added to pom.xml, natch
+* Let me know when we can add a REST interface for this puppy or a GUI.
 
 
 Without spring-boot
