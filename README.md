@@ -37,7 +37,9 @@ Set up your PropertyConfigurator to search for system properties.  This is how y
 
 
 The "path.to.config" in the above stanza is _not_ a reference to a spring property.  Rather, its a reference
-to a system property.  It will be up to you to populate it via System.setProperty("path.to.config", propertyPath). 
+to a system property.  It will be up to you to populate it via System.setProperty("path.to.config", propertyPath), 
+_before_ you start the spring context.
+ 
 The "propertyPath" is the path to your properties file (presumably gleaned from parsing a cli arg).
 
 Basically this describes what spring boot is doing via various conventions & defaults.
