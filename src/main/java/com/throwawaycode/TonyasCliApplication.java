@@ -34,6 +34,7 @@ public class TonyasCliApplication {
             LOG.info("=================================================================================");
             LOG.info("Put your run logic here!  (whatever is currently in your current main method)");
             LOG.info("output of value for 'cli.message' --->{}", message);
+            LOG.info("---------------------------------------------------------------------------------");
             LOG.info("If you need to grab an existing bean, just add an @Resource to TonyasCliApplication.");
             LOG.info("I've injected KeithsSillyBean to demonstrate calling a bean's method:");
             keithsSillyBean.makeStuffHappen();
