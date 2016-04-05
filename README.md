@@ -42,17 +42,17 @@ Set up your PropertyConfigurator to search for system properties.  This is how y
         &lt;property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/&gt;
         &lt;property name="locations"&gt;
             &lt;list&gt;
-                &lt;value&gt;${path.to.config}&lt;/value&gt;
+                &lt;value&gt;${file.url.of.config.file}&lt;/value&gt;
             &lt;/list&gt;
         &lt;/property&gt;
     &lt;/bean&gt;
 </pre>
 
-The "path.to.config" in the above stanza is _not_ a reference to a spring property.  Rather, its a reference
-to a system property.  It will be up to you to populate it via System.setProperty("path.to.config", propertyPath), 
+The "file.url.of.config.file" in the above stanza is _not_ a reference to a spring property.  Rather, its a reference
+to a system property.  It will be up to you to populate it via System.setProperty("file.url.of.config.file", propertyFileUrl), 
 _before_ you start the spring context.
  
-The "propertyPath" is the file url to your properties file (presumably gleaned from parsing a cli arg).  Note 
+The "propertyFileUrl" is the file url to your properties file (presumably gleaned from parsing a cli arg).  Note 
 it should be a file URL, i.e. "file:///home/tonya/your.properties".
 
 Basically this describes what spring boot is doing via various conventions & defaults.
