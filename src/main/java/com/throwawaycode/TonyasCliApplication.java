@@ -13,8 +13,19 @@ import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
 @Configuration
+/**
+ * This is the equalivalent of your current Main class.
+ */
 public class TonyasCliApplication {
 
+    /**
+     * Spring boot has its own way of consuming/parsing cli args.  Basically, any arg that's in the format of
+     * --[arg name]=[arg value] is made available for use in @Value.
+     *
+     * But what you want is to define the entire file where config files reside, and that's explained in the
+     * README.
+     * @param args
+     */
 	public static void main(String[] args) {
 		SpringApplication.run(TonyasCliApplication.class, args);
 	}
