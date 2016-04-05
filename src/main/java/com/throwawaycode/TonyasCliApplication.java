@@ -30,7 +30,7 @@ public class TonyasCliApplication {
 
     @Bean
     public CommandLineRunner commandLineRunner() {
-        return strings -> {
+        return args -> {
             LOG.info("=================================================================================");
             LOG.info("Put your run logic here!  (whatever is currently in your current main method)");
             LOG.info("output of value for 'cli.message' --->{}", message);
