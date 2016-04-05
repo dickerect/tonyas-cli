@@ -7,10 +7,12 @@ For example, if you've a prompt at the root of this project:
 
 java -jar target/tonyas-cli-0.0.1-SNAPSHOT.jar --spring.config.location=file:demo.app.properties
 
-Otherwise, the included application.properties are used.
+Without supplying the "spring.config.location" arg, the included application.properties are used.
 
 
-* You may need to add @ImportResource to TonyasCliApplication to include your other spring context file(s)/classes
+Notes:
+
+* You may need to add @ImportResource to TonyasCliApplication to include your other spring context file(s)/classes.
 * Also all the other dependencies, natch
 
 
@@ -34,8 +36,9 @@ Set up your PropertyConfigurator to search for system properties.  This is how y
     </bean>
 
 
-Before you start the spring context, it'll be up to you to call System.setProperty("path.to.config") with the path to the
-property file (presumably gleaned from parsing a cli arg).
+The "path.to.config" in the above stanza is _not_ a reference to a spring property.  Rather, its a reference
+to a system property.  It will be up to you to populate it via System.setProperty("path.to.config", propertyPath). 
+The "propertyPath" is the path to your properties file (presumably gleaned from parsing a cli arg).
 
 Basically this describes what spring boot is doing via various conventions & defaults.
 
