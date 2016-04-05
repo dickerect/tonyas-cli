@@ -7,6 +7,8 @@ For example, if you've a prompt at the root of this project:
 
 java -jar target/tonyas-cli-0.0.1-SNAPSHOT.jar --spring.config.location=file:demo.app.properties
 
+Otherwise, the included application.properties are used.
+
 
 * You may need to add @ImportResource to TonyasCliApplication to include your other spring context file(s)/classes
 * Also all the other dependencies, natch
