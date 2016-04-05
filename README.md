@@ -1,4 +1,4 @@
-Intro
+Keiths Wall Of Text
 =======================================
 
 This is using spring boot, just because its easier than trying to explain how to do it manually.  You should be able
@@ -22,7 +22,6 @@ Without supplying the "spring.config.location" arg, the included application.pro
 Notes:
 
 * You may need to add @ImportResource to TonyasCliApplication to include your other spring context file(s)/classes.
-* Also all the other dependencies should be added to pom.xml, natch
 * Although spring-boot has its own hibernate/JPA mechanisms, they aren't included here.  Further, I don't _think_
 any of those mechanisms will interfere with your own hibernate/db setup.  I could be wrong though.
 * Let me know when we can add a REST interface for this puppy or a GUI.
