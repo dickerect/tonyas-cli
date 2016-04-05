@@ -10,9 +10,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @Configuration
+// for importing a spring XML context file
+@ImportResource(locations = "/application-context.xml")
+// for importing a spring config class
+@Import(SampleConfiguration.class)
+
 /**
  * This is the equalivalent of your current Main class.
  */
