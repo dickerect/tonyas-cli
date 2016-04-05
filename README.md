@@ -13,7 +13,7 @@ Without supplying the "spring.config.location" arg, the included application.pro
 Notes:
 
 * You may need to add @ImportResource to TonyasCliApplication to include your other spring context file(s)/classes.
-* Also all the other dependencies, natch
+* Also all the other dependencies should be added to pom.xml, natch
 
 
 Without spring-boot
