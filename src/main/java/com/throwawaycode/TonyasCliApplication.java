@@ -18,20 +18,21 @@ import org.springframework.context.annotation.Configuration;
  */
 public class TonyasCliApplication {
 
+    private static final Logger LOG = LoggerFactory.getLogger(TonyasCliApplication.class);
+
     /**
+     * This is the entry point.  Note lack of any code, just calling SpringApplication.run.
      * Spring boot has its own way of consuming/parsing cli args.  Basically, any arg that's in the format of
-     * --[arg name]=[arg value] is made available for use in @Value.
+     * --[arg name]=[arg value] when invoking the jar is made available for use in @Value.
      *
-     * But what you want is to define the entire file where config files reside, and that's explained in the
+     * But what you want is to define where a whole properties file exists, and that's explained in the
      * README.
+     *
      * @param args
      */
 	public static void main(String[] args) {
 		SpringApplication.run(TonyasCliApplication.class, args);
 	}
-
-
-    private static final Logger LOG = LoggerFactory.getLogger(TonyasCliApplication.class);
 
     @Value("${cli.message}")
     private String message;
